@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Information Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body><center>
+    <h2>Upload your cat Picture</h2>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        <label for="picture">Select a picture:</label>
+        <input type="file" id="picture" name="picture" accept="image/*">
+        <br>
+        <input type="submit" value="Upload">
+    </form>
+
+    <h1>Cat Information Page</h1>
+
+    <form action="/submit" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="name">Breed:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="selectChoice">Sex</label>
+     <select id="selectChoice" name="selectChoice">
+    <option value="option1">male</option>
+    <option value="option2">female</option>
+</select>
+    <br>
+  
+        <label for="name">Age:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="name">Vaccine:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="selectChoice">Have you been sterilized yet?</label>
+     <select id="selectChoice" name="selectChoice">
+    <option value="option1">yes</option>
+    <option value="option2">no</option>
+    
+  </select>
+       <br>
+       <BR>
+
+        <button type="submit">Submit</button>
+    </form>
+    
+</body>
+</html>
