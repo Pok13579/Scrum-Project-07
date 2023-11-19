@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,27 +9,43 @@
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+            background-color: #ffe6f2; 
+        }
+
+        h2, h1 {
+            color: #080808; 
         }
 
         form {
             max-width: 400px;
             margin: 0 auto;
+            background-color: #fff; 
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         label {
             display: block;
             margin-bottom: 8px;
+            color: #ff69b4;
         }
 
-        input, textarea {
-            width: 100%;
+        input, select {
+            width: calc(100% - 16px);
             padding: 8px;
             margin-bottom: 16px;
             box-sizing: border-box;
+            border: 1px solid #ff69b4; 
+            border-radius: 4px;
+        }
+
+        select {
+            width: 100%;
         }
 
         button {
-            background-color: #4CAF50;
+            background-color: #ff69b4; 
             color: white;
             padding: 10px 15px;
             border: none;
@@ -37,91 +54,89 @@
         }
 
         button:hover {
-            background-color: #45a049;
+            background-color: #ff3399; 
+        }
+
+        #image-preview {
+            max-width: 100%;
+            max-height: 200px;
+            border: 1px solid #ff69b4; 
+            border-radius: 4px;
+            margin-top: 10px;
         }
     </style>
 
-<script>
-    function previewImage() {
-        var preview = document.querySelector('#image-preview');
-        var fileInput = document.querySelector('#picture');
+    <script>
+        function previewImage() {
+            var preview = document.querySelector('#image-preview');
+            var fileInput = document.querySelector('#picture');
 
-        fileInput.addEventListener('change', function () {
-            var file = this.files[0];
+            fileInput.addEventListener('change', function () {
+                var file = this.files[0];
 
-            if (file) {
-                var reader = new FileReader();
+                if (file) {
+                    var reader = new FileReader();
 
-                reader.addEventListener('load', function () {
-                    preview.src = reader.result;
-                });
+                    reader.addEventListener('load', function () {
+                        preview.src = reader.result;
+                    });
 
-                reader.readAsDataURL(file); 
-            }
-        });
-    }
-</script>
+                    reader.readAsDataURL(file);
+                }
+            });
+        }
+    </script>
 </head>
-<body><center>
-    <h2>Upload scat Picture</h2>
-        <form action="upload.php" method="post" enctype="multipart/form-data" oninput="previewImage()">
+
+<body>
+    <center>
+        <h2>Upload Cat Picture</h2>
+        <form action="#" method="post" enctype="multipart/form-data" oninput="previewImage()">
             <label for="picture">Select a picture:</label>
             <input type="file" id="picture" name="picture" accept="image/*">
             <br>
-            <img id="image-preview" alt="Image Preview" style="max-width: 100%; max-height: 200px;">
+            <img id="image-preview" alt="Image Preview">
             <br>
             <input type="submit" value="Upload">
         </form>
-        </center>
+    </center>
 
-    
-        <center>
-    <h1>Cat Information Page</h1>
-        </center>
+    <center>
+        <h1>Cat Information Page</h1>
+    </center>
     <form action="/submit" method="post">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
 
-        <label for="name">Breed:</label>
-        <input type="text" id="name" name="name" required>
+        <label for="breed">Breed:</label>
+        <input type="text" id="breed" name="breed" required>
 
-        <label for="selectChoice">Sex</label>
-     <select id="selectChoice" name="selectChoice">
-    <option value="option1">male</option>
-    <option value="option2">female</option>
-</select>
-    <br>
-    <br>
-  
-        <label for="name">Age:</label>
-        <input type="text" id="name" name="name" required>
+        <label for="selectChoice">Sex:</label>
+        <select id="selectChoice" name="selectChoice">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <br>
+        <br>
 
-        <label for="name">Vaccine:</label>
-        <input type="text" id="name" name="name" required> 
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required>
 
-        <label for="name">Treatment information(If you have):</label>
-        <input type="text" id="name" name="name" required> 
-        <br>   
-        <label for="selectChoice">ID card of cat</label>
-            
+        <label for="vaccine">Vaccine:</label>
+        <input type="text" id="vaccine" name="vaccine" required>
+
+        <label for="treatment">Treatment information (If you have):</label>
+        <input type="text" id="treatment" name="treatment" required>
+        <br>
+        <label for="catId">ID card of cat:</label>
+        <input type="file" id="catId" name="catId" accept="image/*">
+        <br>
+
         <center>
-            <form action="upload.php" method="post" enctype="multipart/form-data" oninput="previewImage()">
-                <label for="picture">Select a picture:</label>
-                <input type="file" id="picture" name="picture" accept="image/*">
-                <br>
-                <img id="image-preview" alt="Image Preview" style="max-width: 100%; max-height: 200px;">
-                <br>
-                <input type="submit" value="Upload">
-            </form>
+            <button type="submit">Submit</button>
         </center>
-    
-  </select>
-       <br>
-       <BR>
-        <center>
-        <button type="submit">Submit</button>
-        </center>   
     </form>
-    
+
 </body>
+
 </html>
