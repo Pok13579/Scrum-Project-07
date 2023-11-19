@@ -4,82 +4,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>booking</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap">
+  <title>Room Booking</title>
   <style>
-    /* Your existing CSS styles here */
-
     body {
-      font-family: 'Open Sans', sans-serif;
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-wrap: wrap;
       height: 100vh;
-      margin: 10px;
-      padding: 20px;
-      background-color: pink;
     }
 
-    .room {
-      background-color: white;
-      border: 2px solid #333;
-      border-radius: 10px;
-      padding: 20px;
-      margin: 10px;
-      width: calc(50% - 20px); /* 50% of the container width with margin */
-      text-align: left;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease-in-out;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    h1 {
+      text-align: center;
+      color: #333;
     }
 
-    .room:hover {
-      transform: scale(1.05);
-    }
-
-    img {
-      width: 100%;
-      max-height: 200px;
-      object-fit: cover;
+    form {
+      background-color: #fff;
+      border: 1px solid #ddd;
       border-radius: 8px;
-      margin-bottom: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 300px;
     }
 
-    .reserve-button {
-      margin-top: 10px;
-      padding: 10px;
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
       background-color: #4CAF50;
       color: white;
+      padding: 10px;
       border: none;
       border-radius: 4px;
       cursor: pointer;
+      width: 100%;
     }
 
-    .reserve-button:hover {
+    button:hover {
       background-color: #45a049;
     }
   </style>
 </head>
 
 <body>
+  
 
-  <div class="room">
-    <h2>Standard Room</h2>
-    <img src="1-kofuku4.jpg" class="img">
-    <p>Accepts 1 cat | 20 rooms | Price 250</p>
-    <ul>
-      <li>Take me for a walk</li>
-      <li>There are CCTV cameras</li>
-      <li>Rice dish, water dish, sandbox</li>
-    </ul>
-    <a href="booking.html"><button class="reserve-button">Reserve Room</button></a>
+  <div>
+    <form action="pay.html" method="post">
+      <input type="hidden" id="roomType" name="roomType">
+      <input type="hidden" id="price" name="price">
+
+      <label for="numRooms">Number of Rooms:</label>
+      <input type="number" id="numRooms" name="numRooms" value="1" min="1" required>
+
+      <label for="checkInDate">Check-In Date:</label>
+      <input type="date" id="checkInDate" name="checkInDate" required>
+
+      <button type="submit">Submit to Payment</button>
+    </form>
   </div>
 
-  <!-- Add similar blocks for other rooms -->
+  <script>
+    window.onload = function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const roomType = urlParams.get('roomType');
+      const price = urlParams.get('price');
 
+      document.getElementById('roomType').value = roomType;
+      document.getElementById('price').value = price;
+    };
+  </script>
 </body>
 
 </html>
