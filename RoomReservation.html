@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Reservation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+
+        input, select {
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #af4c95;
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #reservationDetails {
+            margin-top: 20px;
+        }
+
+        #qrcode {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Room Reservation</h1>
+
+    <!-- Calendar for selecting the reservation date -->
+    <label for="reservationDate">Select Reservation Date:</label>
+    <input type="date" id="reservationDate" name="reservationDate">
+
+    <!-- Select dropdown for specifying the number of reservations -->
+    <label for="numOfReservations">Number of Reservations:</label>
+    <select id="numOfReservations" name="numOfReservations">
+        <!-- You can customize the number of options based on your needs -->
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <!-- Add more options as needed -->
+    </select>
+
+    <!-- Button to add reservations and generate QR code -->
+    <button onclick="generateQRCode()">Add Reservation & Generate QR Code</button>
+
+    <!-- Display the selected date and number of reservations -->
+    <div id="reservationDetails">
+        <h2>Reservation Details</h2>
+        <p id="selectedDate">Selected Date: </p>
+        <p id="selectedNum">Number of Reservations: </p>
+    </div>
+
+    <!-- Container for displaying the generated QR code -->
+    <div id="qrcode"></div>
+
+    <!-- Add your JavaScript logic for handling the button click and updating details -->
+    <script>
+        function generateQRCode() {
+            // Get the selected date
+            var selectedDate = document.getElementById("reservationDate").value;
+
+            // Get the selected number of reservations
+            var selectedNum = document.getElementById("numOfReservations").value;
+
+            // Update the displayed details
+            document.getElementById("selectedDate").innerHTML = "Selected Date: " + selectedDate;
+            document.getElementById("selectedNum").innerHTML = "Number of Reservations: " + selectedNum;
+
+            // Generate QR code logic (replace this with your actual QR code generation code)
+            // You can use a third-party library or an API for generating QR codes
+            // For example, you might use the Google Charts API for simplicity
+            var qrCodeUrl = "https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=" + encodeURIComponent("Payment URL or Information");
+            
+            // Display the QR code (replace "qrcode" with the ID or class of your QR code container)
+            document.getElementById("qrcode").innerHTML = '<img src="' + qrCodeUrl + '" alt="QR Code">';
+        }
+    </script>
+
+</body>
+</html>
