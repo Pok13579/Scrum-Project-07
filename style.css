@@ -14,6 +14,7 @@ body {
 	align-items: center;
 	background: var(--light-grey);
 	font-family: monospace, Arial, Helvetica, sans-serif;
+	background-image: url('https://image.petmd.com/files/styles/863x625/public/2023-09/how-smart-are-cats.jpg');
 }
 
 body * {
@@ -21,10 +22,16 @@ body * {
 	outline: none;
 }
 
+header {
+	background-color: #ff66b2;
+	color: #fff;
+	padding: 1em;
+	text-align: center;
+}
 
 
 .container {
-    width: 210px;
+    width: 400px;
     position: relative;
     text-align: auto;
 	
@@ -34,6 +41,25 @@ body * {
     box-shadow: 0.15em 0.15em 0.25em var(--dark-grey) inset,
         -0.15em -0.15em 0.25em #ffffff80 inset, 0.3em 0.3em 0.6em var(--dark-grey),
         -0.2em -0.2em 0.5em #ffffff80;
+
+	background-color: #ffffff;
+}
+
+	
+
+.container1 {
+    width: 600px;
+    position: relative;
+    text-align: auto;
+	
+    border: 1px solid #ccc;
+    padding: auto;
+    border-radius: 5px;
+    box-shadow: 0.15em 0.15em 0.25em var(--dark-grey) inset,
+        -0.15em -0.15em 0.25em #ffffff80 inset, 0.3em 0.3em 0.6em var(--dark-grey),
+        -0.2em -0.2em 0.5em #ffffff80;
+
+	background-color: #ffffff;
 }
 
 .submit-button {
@@ -93,7 +119,7 @@ input::-ms-input-placeholder {
 
 input.active {
 	animation: scanning 1s ease 0s 1;
-	background: linear-gradient(90deg, #02de0b 50%, #ececec 100%);
+	background: linear-gradient(90deg, #f68fed 50%, #ececec 100%);
 	background-repeat: no-repeat;
 	background-position: -210px;
 	background-color: #ececec;
@@ -166,10 +192,9 @@ input.active {
 }
 
 #reveal.open {
-	transition: all 0.5s ease 0s;	
-	background: linear-gradient(145deg, #8ce88f, #009205);
+    transition: all 0.5s ease 0s;  
+    background: linear-gradient(145deg, #ff99cc, #ff66b2); /* Pink colors */
 }
-
 #reveal.open:after {
 	transform: rotateX(-180deg);
 	top: 10px;
@@ -212,13 +237,13 @@ input.active {
 }
 
 #reveal.open:hover span:before {
-	content: "Hide Password";
-	background: #61cd64 !important;
-	color: #215d23;
+    content: "Hide Password";
+    background: #ff99cc !important; /* Pink color */
+    color: #ff0066; /* Darker pink color */
 }
 
 #reveal.open:hover span:after {
-	border-top-color: #61cd64;
+	border-top-color: #cd61bd;
 }
 
 #reveal[disabled="disabled"]:hover span:before {
@@ -289,10 +314,9 @@ input.active {
 }
 
 #fakepass.scan:after {
-	background: #07ff10;
-	box-shadow: 0 0 3px 1px #75c177, 0 0 10px 3px #00cc08;
-	right: 5px;
-
+    background: #ff69b4; /* Pink color */
+    box-shadow: 0 0 3px 1px #ff69b4, 0 0 10px 3px #ff1493; /* Darker pink color */
+    right: 5px;
 }
 
 
@@ -340,3 +364,5 @@ input.active {
 			0 0 2px #666, 0 0 2px #666, 0 0 2px #666, 0 0 2px #666;
 	}
 }
+
+
