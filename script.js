@@ -1,4 +1,3 @@
-
 var btn = document.getElementById('reveal');
 var box = document.getElementById('pass');
 var fak = document.getElementById('fakepass');
