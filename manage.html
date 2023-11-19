@@ -63,7 +63,7 @@
 </script>
 </head>
 <body><center>
-    <h2>Upload your cat Picture</h2>
+    <h2>Upload scat Picture</h2>
         <form action="upload.php" method="post" enctype="multipart/form-data" oninput="previewImage()">
             <label for="picture">Select a picture:</label>
             <input type="file" id="picture" name="picture" accept="image/*">
@@ -97,12 +97,23 @@
         <input type="text" id="name" name="name" required>
 
         <label for="name">Vaccine:</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="selectChoice">Have you been sterilized yet?</label>
-     <select id="selectChoice" name="selectChoice">
-    <option value="option1">yes</option>
-    <option value="option2">no</option>
+        <input type="text" id="name" name="name" required> 
+
+        <label for="name">Treatment information(If you have):</label>
+        <input type="text" id="name" name="name" required> 
+        <br>   
+        <label for="selectChoice">ID card of cat</label>
+            
+        <center>
+            <form action="upload.php" method="post" enctype="multipart/form-data" oninput="previewImage()">
+                <label for="picture">Select a picture:</label>
+                <input type="file" id="picture" name="picture" accept="image/*">
+                <br>
+                <img id="image-preview" alt="Image Preview" style="max-width: 100%; max-height: 200px;">
+                <br>
+                <input type="submit" value="Upload">
+            </form>
+        </center>
     
   </select>
        <br>
