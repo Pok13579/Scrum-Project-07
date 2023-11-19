@@ -10,7 +10,7 @@
     body {
       font-family: 'Open Sans', sans-serif;
       display: flex;
-      flex-direction: column; /* Align items in a column */
+      flex-direction: column;
       align-items: center;
       height: 100vh;
       margin: 10px;
@@ -20,8 +20,8 @@
 
     nav {
       display: flex;
-      justify-content: flex-end; /* Move the links to the right */
-      width: 100%; /* Full width */
+      justify-content: flex-end;
+      width: 100%;
       margin-bottom: 10px;
     }
 
@@ -70,51 +70,56 @@
     <a href="condition.html">Condition</a>
     <a href="login.html">Login</a>
   </nav>
+
   <div class="room-container">
-  <div class="room">
-    <h2>Standard Room</h2>
-    <img src="1-kofuku4.jpg" class="img">
-    <p>Accepts 1 cat | 20 rooms | Price 250</p>
-    <ul>
-      <li>Take me for a walk</li>
-      <li>There are CCTV cameras</li>
-      <li>Rice dish, water dish, sandbox</li>
-    </ul>
+    <div class="room">
+      <h2>Standard Room</h2>
+      <img src="1-kofuku4.jpg" class="img">
+      <p>Accepts 1 cat | 20 rooms | Price 250</p>
+      <ul>
+        <li>Take me for a walk</li>
+        <li>There are CCTV cameras</li>
+        <li>Rice dish, water dish, sandbox</li>
+      </ul>
+    </div>
+
+    <div class="room">
+      <h2>Superior Room</h2>
+      <img src="room1.jpg" class="img">
+      <p>Accepts 4 cats | 10 rooms | Price 450</p>
+      <ul>
+        <li>Take me for a walk</li>
+        <li>There are CCTV cameras</li>
+        <li>Rice dish, water dish, sandbox</li>
+      </ul>
+    </div>
+
+    <div class="room-container">
+      <!-- Common container for Deluxe Room and Suite Room -->
+      <div class="room">
+        <h2>Deluxe Room</h2>
+        <img src="room2.jpg" class="img">
+        <p>Accepts 6 cats | 3 rooms | Price 550</p>
+        <ul>
+          <li>Take me for a walk</li>
+          <li>There are CCTV cameras</li>
+          <li>Rice dish, water dish, sandbox</li>
+        </ul>
+      </div>
+
+      <div class="room">
+        <h2>Suite Room</h2>
+        <img src="11-12.jpg" class="img">
+        <p>Accepts 10 cats | 1 room | Price 900</p>
+        <ul>
+          <li>Take me for a walk</li>
+          <li>There are CCTV cameras</li>
+          <li>Rice dish, water dish, sandbox</li>
+        </ul>
+      </div>
+    </div>
   </div>
 
-  <div class="room">
-    <h2>Superior Room</h2>
-    <img src="room1.jpg" class="img">
-    <p>Accepts 4 cats | 10 rooms | Price 450</p>
-    <ul>
-      <li>Take me for a walk</li>
-      <li>There are CCTV cameras</li>
-      <li>Rice dish, water dish, sandbox</li>
-    </ul>
-  </div>
-
-  <div class="room">
-    <h2>Deluxe Room</h2>
-    <img src="room2.jpg" class="img">
-    <p>Accepts 6 cats | 3 rooms | Price 550</p>
-    <ul>
-      <li>Take me for a walk</li>
-      <li>There are CCTV cameras</li>
-      <li>Rice dish, water dish, sandbox</li>
-    </ul>
-  </div>
-
-  <div class="room">
-    <h2>Suite Room</h2>
-    <img src="11-12.jpg" class="img">
-    <p>Accepts 10 cats | 1 room | Price 900</p>
-    <ul>
-      <li>Take me for a walk</li>
-      <li>There are CCTV cameras</li>
-      <li>Rice dish, water dish, sandbox</li>
-    </ul>
-  </div>
-</div>
 </body>
 
 </html>
