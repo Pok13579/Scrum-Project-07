@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filo Cat Home</title>
+    <title>CC TV</title>
     <style>
          body {
             font-family: 'Arial', sans-serif;
@@ -36,7 +36,13 @@
             padding: 10px;
             transition: color 0.3s ease;
         }
-
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #ffc0cb;
+        }
         nav a:hover {
             color: #333;
         }
@@ -46,6 +52,7 @@
             display: flex;
             flex-wrap: nowrap; /* Ensure videos stay in one line */
             overflow-x: auto; /* Add horizontal scroll if needed */
+            
         }
 
         footer {
@@ -72,7 +79,7 @@
         }
 
         .cat-video {
-            flex: 0 0 30%; /* Set the width of each video container */
+            flex: 0 0 50%; /* Set the width of each video container */
             margin: 0 10px; /* Add some margin between videos */
             box-sizing: border-box;
         }
@@ -81,95 +88,39 @@
             width: 100%;
         }
 
+        footer {
+            background-color: #fd389a;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: static;
+            bottom: 0;
+            width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>cctv</h1>
+        <h1>Your Cat</h1>
     </header>
 
-    <section>
-        <h1 style="color: #333;">Standard Room</h1>
-
-        <div class="cat-video">
-            <h2>Room 1</h2>
-            <video controls>
-                <source src="path/to/your/video1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-
-        <div class="cat-video">
-            <h2>Room 2</h2>
-            <video controls>
-                <source src="path/to/your/video2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
+    
+        <h2 style="color: #333; text-align: center;" >You cat live in Standard Room</h2>
    
-
-    </section>
-    <section>
-        <h1 style="color: #333;">Superior Room</h1>
-
-        <div class="cat-video">
-            <h2>Room 1</h2>
+    <center>
+        <div class="cat-video" id="standard-room-1">
             <video controls>
                 <source src="path/to/your/video1.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
-
-        <div class="cat-video">
-            <h2>Room 2</h2>
-            <video controls>
-                <source src="path/to/your/video2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </section>
-
-    <section>
-        <h1 style="color: #333;">Deluxe Room</h1>
-
-        <div class="cat-video">
-            <h2>Room 1</h2>
-            <video controls>
-                <source src="path/to/your/video1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-
-        <div class="cat-video">
-            <h2>Room 2</h2>
-            <video controls>
-                <source src="path/to/your/video2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </section>
-
-    <section>
-        <h1 style="color: #333;">Suite Room</h1>
-
-        <div class="cat-video">
-            <h2>Room 1</h2>
-            <video controls>
-                <source src="path/to/your/video1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-
-        <div class="cat-video">
-            <h2>Room 2</h2>
-            <video controls>
-                <source src="path/to/your/video2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </section>
+    </center>
+    <br>
+    
     <footer>
+        <br>
         &copy; 2023 Filo Cat Home
     </footer>
 </body>
