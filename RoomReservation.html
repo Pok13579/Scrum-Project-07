@@ -75,7 +75,7 @@
       <li>There are CCTV cameras</li>
       <li>Rice dish, water dish, sandbox</li>
     </ul>
-    <button class="reserve-button" onclick="reserveRoom('Standard Room', 250)">Reserve Room</button>
+    <button class="reserve-button" onclick="window.location.href='booking.html?roomType=Standard%20Room&price=250'">Reserve Room</button>
   </div>
 
   <div class="room">
@@ -87,7 +87,7 @@
       <li>There are CCTV cameras</li>
       <li>Rice dish, water dish, sandbox</li>
     </ul>
-    <button class="reserve-button" onclick="reserveRoom('Superior Room', 450)">Reserve Room</button>
+    <button class="reserve-button" onclick="window.location.href='booking.html?roomType=Superior%20Room&price=450'">Reserve Room</button>
   </div>
 
   <div class="room">
@@ -99,7 +99,7 @@
       <li>There are CCTV cameras</li>
       <li>Rice dish, water dish, sandbox</li>
     </ul>
-    <button class="reserve-button" onclick="reserveRoom('Deluxe Room', 550)">Reserve Room</button>
+    <button class="reserve-button" onclick="window.location.href='booking.html?roomType=Deluxe%20Room&price=550'">Reserve Room</button>
   </div>
 
   <div class="room">
@@ -111,17 +111,9 @@
       <li>There are CCTV cameras</li>
       <li>Rice dish, water dish, sandbox</li>
     </ul>
-    <button class="reserve-button" onclick="reserveRoom('Suite Room', 900)">Reserve Room</button>
+    <button class="reserve-button" onclick="window.location.href='booking.html?roomType=Suite%20Room&price=900'">Reserve Room</button>
   </div>
-
-  <!-- JavaScript function to handle room reservation -->
-  <script>
-    function reserveRoom(roomType, price) {
-      // You can implement your reservation logic here
-      alert('Room reserved: ' + roomType + ' | Price: ' + price);
-    }
-  </script>
-
+  
 </body>
 
 </html>

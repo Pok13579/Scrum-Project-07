@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment</title>
+ 
+</head>
+
+<body>
+  <h1>Payment</h1>
+
+  <div>
+    
+    <img src="QR.gif" alt="QR Code">
+    <div>
+    <button onclick="completePayment()">Complete Payment</button></div>
+  </div>
+
+  <script>
+    window.onload = function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const price = urlParams.get('price');
+
+      document.getElementById('totalAmount').innerText = price;
+    };
+
+    function completePayment() {
+      window.location.href = 'Home.html';
+    }
+    
+  </script>
+</body>
+
+</html>
