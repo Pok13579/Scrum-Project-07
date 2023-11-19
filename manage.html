@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Information Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+<script>
+    function previewImage() {
+        var preview = document.querySelector('#image-preview');
+        var fileInput = document.querySelector('#picture');
+
+        fileInput.addEventListener('change', function () {
+            var file = this.files[0];
+
+            if (file) {
+                var reader = new FileReader();
+
+                reader.addEventListener('load', function () {
+                    preview.src = reader.result;
+                });
+
+                reader.readAsDataURL(file); 
+            }
+        });
+    }
+</script>
+</head>
+<body><center>
+    <h2>Upload your cat Picture</h2>
+        <form action="upload.php" method="post" enctype="multipart/form-data" oninput="previewImage()">
+            <label for="picture">Select a picture:</label>
+            <input type="file" id="picture" name="picture" accept="image/*">
+            <br>
+            <img id="image-preview" alt="Image Preview" style="max-width: 100%; max-height: 200px;">
+            <br>
+            <input type="submit" value="Upload">
+        </form>
+        </center>
+
+    
+        <center>
+    <h1>Cat Information Page</h1>
+        </center>
+    <form action="/submit" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="name">Breed:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="selectChoice">Sex</label>
+     <select id="selectChoice" name="selectChoice">
+    <option value="option1">male</option>
+    <option value="option2">female</option>
+</select>
+    <br>
+    <br>
+  
+        <label for="name">Age:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="name">Vaccine:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="selectChoice">Have you been sterilized yet?</label>
+     <select id="selectChoice" name="selectChoice">
+    <option value="option1">yes</option>
+    <option value="option2">no</option>
+    
+  </select>
+       <br>
+       <BR>
+        <center>
+        <button type="submit">Submit</button>
+        </center>   
+    </form>
+    
+</body>
+</html>
