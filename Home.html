@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filo Cat Home</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #fff;
+        }
+
+        header {
+            background-color: #ff69b4;
+            padding: 20px;
+            text-align: center;
+            color: black;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #ff69b4;
+            padding: 10px;
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            padding: 10px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #333;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #ff69b4;
+            color: black;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .login-link {
+            color: black;
+            text-decoration: none;
+            padding: 10px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .login-link:hover {
+            color: #333;
+        }
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px auto;
+        }
+
+        .cat-image {
+            width: 25%; 
+            height: auto;
+            border: 2px solid #ff69b4;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Filo Cat Home</h1>
+    </header>
+
+    <a href="login.html" class="login-link">Login</a>
+
+    <nav>
+        <a href="infomation.html">Contact us</a>
+        <a href="Room.html">Room</a>
+        <a href="condition.html">Condition</a>
+    </nav>
+
+    <section class="image-container">
+        <img src="cat.jpg" alt="Cute Cat" class="cat-image">
+        <img src="cat1.jpg" alt="Cute Cat" class="cat-image">
+        <img src="cat2.jpg" alt="Cute Cat" class="cat-image">
+    </section>
+    <footer>
+        &copy; 2023 Filo Cat Home
+    </footer>
+</body>
+
+</html>
