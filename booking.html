@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Room Reservation</title>
+  <title>booking</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap">
   <style>
     /* Your existing CSS styles here */
@@ -75,52 +75,10 @@
       <li>There are CCTV cameras</li>
       <li>Rice dish, water dish, sandbox</li>
     </ul>
-    <button class="reserve-button" onclick="reserveRoom('Standard Room', 250)">Reserve Room</button>
+    <a href="booking.html"><button class="reserve-button">Reserve Room</button></a>
   </div>
 
-  <div class="room">
-    <h2>Superior Room</h2>
-    <img src="room1.jpg" class="img">
-    <p>Accepts 4 cats | 10 rooms | Price 450</p>
-    <ul>
-      <li>Take me for a walk</li>
-      <li>There are CCTV cameras</li>
-      <li>Rice dish, water dish, sandbox</li>
-    </ul>
-    <button class="reserve-button" onclick="reserveRoom('Superior Room', 450)">Reserve Room</button>
-  </div>
-
-  <div class="room">
-    <h2>Deluxe Room</h2>
-    <img src="room2.jpg" class="img">
-    <p>Accepts 6 cats | 3 rooms | Price 550</p>
-    <ul>
-      <li>Take me for a walk</li>
-      <li>There are CCTV cameras</li>
-      <li>Rice dish, water dish, sandbox</li>
-    </ul>
-    <button class="reserve-button" onclick="reserveRoom('Deluxe Room', 550)">Reserve Room</button>
-  </div>
-
-  <div class="room">
-    <h2>Suite Room</h2>
-    <img src="11-12.jpg" class="img">
-    <p>Accepts 10 cats | 1 room | Price 900</p>
-    <ul>
-      <li>Take me for a walk</li>
-      <li>There are CCTV cameras</li>
-      <li>Rice dish, water dish, sandbox</li>
-    </ul>
-    <button class="reserve-button" onclick="reserveRoom('Suite Room', 900)">Reserve Room</button>
-  </div>
-
-  <!-- JavaScript function to handle room reservation -->
-  <script>
-    function reserveRoom(roomType, price) {
-      // You can implement your reservation logic here
-      alert('Room reserved: ' + roomType + ' | Price: ' + price);
-    }
-  </script>
+  <!-- Add similar blocks for other rooms -->
 
 </body>
 
