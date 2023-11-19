@@ -1,6 +1,6 @@
 :root {
 	--light-grey: #e0e0e0;
-	--dark-grey: #c5c5c5;
+	--dark-grey: pink;
 }
 
 
@@ -88,7 +88,7 @@ header {
 }
 
 input {
-	background: #ececec;
+	background: pink;
 	border: 0;
 	font-size: 1em;
 	width: 100%;
@@ -100,21 +100,21 @@ input {
 	position: center;/*absolute*/
 	z-index: 1;
 	height: 40px;
-	color: #808080;
+	color: #ffffff;
 	font-family: monospace, Arial, Helvetica, sans-serif;
 }
 
 input::placeholder {
-	color: #808080;
+	color: #ffffff;
 	opacity: 1;
 }
 
 input:-ms-input-placeholder {
-	color: #808080;
+	color: #ffffff;
 }
 
 input::-ms-input-placeholder {
-	color: #808080;
+	color: #ffffff;
 }
 
 input.active {
